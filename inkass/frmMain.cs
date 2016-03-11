@@ -214,7 +214,7 @@ namespace inkass
                         (SERVER = DEDICATED)
                         (SERVICE_NAME = ODB)
                     )
-                );User Id=XXI;Password=xdr5^&*(";
+                );User Id=SAA;Password=St8+n6)T";
 
         private string getCorr(string bik)
         {

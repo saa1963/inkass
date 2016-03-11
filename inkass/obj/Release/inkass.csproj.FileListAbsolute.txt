@@ -10,3 +10,15 @@ D:\Мои документы\Visual Studio 2008\Projects\inkass\inkass\obj\Relea
 D:\Мои документы\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.csproj.GenerateResource.Cache
 D:\Мои документы\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.exe
 D:\Мои документы\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.pdb
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\bin\Release\inkass.exe.config
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.exe
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.pdb
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\bin\Release\inkass.exe
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\bin\Release\inkass.pdb
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.csprojResolveAssemblyReference.cache
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.frmMain.resources
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.frmOptions.resources
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.Properties.Resources.resources
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.Resource1.resources
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.csproj.GenerateResource.Cache
