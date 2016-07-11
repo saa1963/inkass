@@ -208,11 +208,11 @@ namespace inkass
                     (ADDRESS = 
                         (PROTOCOL = TCP)
                         (HOST = 192.168.20.217)
-                        (PORT = 1521)
+                        (PORT = 1522)
                     )
                     (CONNECT_DATA = 
                         (SERVER = DEDICATED)
-                        (SERVICE_NAME = ODB)
+                        (SERVICE_NAME = ODBN)
                     )
                 );User Id=SAA;Password=St8+n6)T";
 
@@ -247,33 +247,7 @@ namespace inkass
             return rt;
         }
 
-        //private string getCorr(string bik)
-        //{
-        //    string rt = "";
-        //    string connstr = "Data Source=192.168.20.221;Initial Catalog=tranzit;Persist Security Info=True;User ID=sa;Password=zxc";
-        //    using (var cn = new SqlConnection(connstr))
-        //    {
-        //        try
-        //        {
-        //            cn.Open();
-        //            var cmd = new SqlCommand("select ksnp from bnkseek where newnum = '" + bik + "'", cn);
-        //            var dr = cmd.ExecuteReader();
-        //            if (dr.Read())
-        //            {
-        //                rt = dr.GetString(0);
-        //            }
-        //            return rt.Trim();
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            MessageBox.Show(e.Message);
-        //            Close();
-        //            return rt;
-        //        }
-        //    }
-        //}
-
-        private void btnPath3_Click(object sender, EventArgs e)
+         private void btnPath3_Click(object sender, EventArgs e)
         {
             DialogResult dr = fbd.ShowDialog();
             if (dr == System.Windows.Forms.DialogResult.OK)
@@ -318,20 +292,12 @@ namespace inkass
             List<clsBatch> lst = new List<clsBatch>();
             XmlTextReader reader = null;
 
-            //           try
-            //            {
             reader = new XmlTextReader(path1);
             reader.WhitespaceHandling = WhitespaceHandling.None; // пропускаем пустые узлы 
             int nm = Int32.Parse(Settings.Default.num);
-            card[] cards = new card[2];
             string bik;
             decimal sm;
-            int batchno;
 
-            cards[0] = new card();
-            cards[1] = new card();
-            cards[0].sm = 0;
-            cards[1].sm = 0;
             while (reader.Read())
                 if (reader.NodeType == XmlNodeType.Element)
                     if (reader.Name == "Deposit")
@@ -339,20 +305,7 @@ namespace inkass
                         bik = reader.GetAttribute("BIK");
                         var txtsm = reader.GetAttribute("Value").Replace('.', ',');
                         sm = Decimal.Parse(txtsm);
-                        if (bik == "046850755")
-                        {
-                            cards[0].batchno = 1;
-                            cards[0].code = 0;
-                            cards[0].sm += sm;
-                            batchno = 1;
-                        }
-                        else
-                        {
-                            cards[1].batchno = 2;
-                            cards[1].code = 17;
-                            cards[1].sm += sm;
-                            batchno = 2;
-                        }
+
                         lst.Add(new clsBatch("1", tbDt.Value, nm.ToString(),
                             sm, "6829000028",
                             reader.GetAttribute("INN"), "682901001",
@@ -361,7 +314,7 @@ namespace inkass
                             "     " + getCorr(bik),
                                 Settings.Default.acc, reader.GetAttribute("Account"),
                                 Settings.Default.accname, reader.GetAttribute("Name"),
-                                "", reader.GetAttribute("MEMO"), batchno));
+                                "", reader.GetAttribute("MEMO"), 1));
                         nm++;
                     }
 
@@ -392,7 +345,6 @@ namespace inkass
                     s += "Client_INN=" + batch.debet_inn.Trim() + "\r\n";
                     s += "Corr_RBIC=" + batch.creditmfo.Trim() + "\r\n";
                     s += "Corr_CorAcc=" + batch.creditcorr.Trim() + "\r\n";
-                    //s += "Corr_Bank_Name=" + GetBankName(batch.creditmfo.Trim()) + "\r\n";
                     s += "Corr_Name=" + batch.creditname.Trim() + "\r\n";
                     s += "Corr_INN=" + batch.credit_inn.Trim() + "\r\n";
                     s += "User=" + Settings.Default.username + "\r\n";
@@ -431,7 +383,6 @@ namespace inkass
             
             if (reader != null)
                 reader.Close();
-            //            }
         }
     }
 }
