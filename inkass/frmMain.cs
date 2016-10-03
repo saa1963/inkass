@@ -202,8 +202,8 @@ namespace inkass
             }
         }
 
-        private const string CONNECTIONSTRING =
-            @"Data Source = 
+        private string CONNECTIONSTRING =
+            String.Format(@"Data Source = 
                 (DESCRIPTION = 
                     (ADDRESS = 
                         (PROTOCOL = TCP)
@@ -214,7 +214,7 @@ namespace inkass
                         (SERVER = DEDICATED)
                         (SERVICE_NAME = ODBN)
                     )
-                );User Id=SAA;Password=St8+n6)T";
+                );User Id={0};Password={1}", Settings.Default.Login, Settings.Default.Password);
 
         private string getCorr(string bik)
         {
