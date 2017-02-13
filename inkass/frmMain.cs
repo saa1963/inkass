@@ -73,7 +73,7 @@ namespace inkass
                 (DESCRIPTION = 
                     (ADDRESS = 
                         (PROTOCOL = TCP)
-                        (HOST = 192.168.20.217)
+                        (HOST = 192.168.20.217 )
                         (PORT = 1522)
                     )
                     (CONNECT_DATA = 
@@ -81,6 +81,7 @@ namespace inkass
                         (SERVICE_NAME = ODBN)
                     )
                 );User Id={0};Password={1}", Settings.Default.Login, Settings.Default.Password);
+        //String.Format(@"Data Source = ODB;User Id={0};Password={1}", Settings.Default.Login, Settings.Default.Password);
 
         private string getCorr(string bik)
         {

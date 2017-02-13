@@ -23,3 +23,7 @@ C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\
 C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.Resource1.resources
 C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.csproj.GenerateResource.Cache
 C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.Login.resources
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\bin\Release\inkass.exe.manifest
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\bin\Release\inkass.application
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.exe.manifest
+C:\Users\soshin\Documents\Visual Studio 2008\Projects\inkass\inkass\obj\Release\inkass.application
