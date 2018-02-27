@@ -69,22 +69,23 @@ namespace inkass
 
 
         private string CONNECTIONSTRING =
-            String.Format(@"Data Source = 
-                (DESCRIPTION = 
-                    (ADDRESS = 
-                        (PROTOCOL = TCP)
-                        (HOST = 192.168.20.217 )
-                        (PORT = 1522)
-                    )
-                    (CONNECT_DATA = 
-                        (SERVER = DEDICATED)
-                        (SERVICE_NAME = ODBN)
-                    )
-                );User Id={0};Password={1}", Settings.Default.Login, Settings.Default.Password);
-        //String.Format(@"Data Source = ODB;User Id={0};Password={1}", Settings.Default.Login, Settings.Default.Password);
+            //String.Format(@"Data Source = 
+            //    (DESCRIPTION = 
+            //        (ADDRESS = 
+            //            (PROTOCOL = TCP)
+            //            (HOST = 192.168.20.217 )
+            //            (PORT = 1521)
+            //        )
+            //        (CONNECT_DATA = 
+            //            (SERVER = DEDICATED)
+            //            (SERVICE_NAME = ODB)
+            //        )
+            //    );User Id={0};Password={1}", Settings.Default.Login, Settings.Default.Password);
+        String.Format(@"Data Source = ODB;User Id={0};Password={1}", Settings.Default.Login, Settings.Default.Password);
 
         private string getCorr(string bik)
         {
+            //return "";
             string rt = "";
             using (OracleConnection cn = new OracleConnection(CONNECTIONSTRING))
             {
